@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>
-    粽情端午
+    Happy Dragon Boat Festival
   </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,7 @@
       padding: 0px;
     }
     body {
-      background-color:#000000; 
+      background-color:#000000;
       min-height: 600px;
       min-width: 1200px;
       font-family: "WenQuanYi Micro Hei",SimSun,sans-serif;
@@ -175,10 +175,10 @@
       position: absolute;
       top: 50%;
       left:50%;
-      margin-left: -70px; 
-      margin-top: -50px; 
+      margin-left: -70px;
+      margin-top: -50px;
       z-index: 130;
-      transform-origin: center center; 
+      transform-origin: center center;
       transform:scale(0.8);
       opacity: 0;
       transition: all 1s;
@@ -190,14 +190,14 @@
       position: absolute;
       top: 50%;
       left:50%;
-      margin-left: -70px; 
-      margin-top: -50px; 
+      margin-left: -70px;
+      margin-top: -50px;
       z-index: 130;
-      transform-origin: center center; 
+      transform-origin: center center;
       transform:scale(0.8);
       opacity: 0;
       transition: all 1s;
-    }  
+    }
     .c_t_in {
       opacity: 1;
       transform:scale(0.8);
@@ -245,7 +245,7 @@
       opacity: 0;
       transition: all 1s 1.5s;
     }
-    .text_in .caption, 
+    .text_in .caption,
     .text_in .to,
     .text_in .msg,
     .text_in .from {
@@ -305,7 +305,7 @@
       transition:all 0s;
       transform:scale(0.8) rotateY(28deg) translate(66px, 16px) rotate(-7deg);
     }
-    
+
   </style>
 </head>
 
@@ -327,13 +327,16 @@
     <div class="text" id="text">
       <div class="caption" id="caption"></div>
       <div class="to">
-        亲爱的小伙伴们：
+        Dear my friends,
       </div>
       <div class="msg">
-        在端午节来临之际，小任给大家送来心意了，祝大家好运、吉祥、如意、幸福、快快乐乐每一天，我的心意永远和您相伴！
-      </div>  
+        Dragon Boat Festival is coming. I wish you good luck. My heart will always be with you.
+      </div>
       <div class="from">
-        任悦晗
+        Sincerely,
+      </div>
+      <div class="from">
+        Yuehan Ren
       </div>
     </div>
   </div>
@@ -366,16 +369,16 @@
       }
     }
 
-    //初始场景
+    //initial scene
     var s1=new Timeline();
-    //粽子展开
+    //rice dumpling opening
     var s2= new Timeline();
-    //粽子旋转
+    //rice dumpling rotating
     var s3=new Timeline();
 
     s1.add(1,function(){
       g('c_zongzi_box').className='c_zongzi_box c_zongzi_box_rock';
-      
+
       g('c_shengzi').onclick = function(){
         s2.start();
       }
@@ -415,7 +418,7 @@
         s3.start();
     })
 
-    // 粽子托盘旋转动画定义
+    // the rotatin animation of leaves
     s3.add(1000,function(){
         g('c_zongzirou').className='c_zongzirou c_zongzirou_in c_zongzirou_1'
     });
@@ -463,8 +466,8 @@
     s3.add(5000,function(){
        s3.start();
     });
-    
-    //图片加载
+
+    //pictures loading
     var imgs=['img/zzr_2.png','img/zzr_3.png','img/zzr_4.png'];
     var imgs_onload = function(){
         imgs.pop();
